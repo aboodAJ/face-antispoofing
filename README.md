@@ -49,5 +49,26 @@ The main training notebook implementing the logic to fine-tune MobileNetV3.
     *   **Checkpointing**: Saves the model with the best validation accuracy.
 *   **Evaluation**: Reports Test Set accuracy and metrics after training.
 
+## 📈 Results
+
+After training the MobileNetV3 model, we evaluated it on the **Test Set** (8,330 samples).
+
+### Confusion Matrix
+![Confusion Matrix](confusion_matrix.png)
+
+### Performance Metrics
+Based on the confusion matrix above:
+
+*   **Total Samples**: 8,330
+*   **Accuracy**: **98.55%**  (8,209 / 8,330)
+*   **Real Class (0)**:
+    *   Precision: 98.18%
+    *   Recall: 88.40%  (106 misclassified as Spoof)
+*   **Spoof Class (1)**:
+    *   Precision: 98.59%
+    *   Recall: 99.80%  (Only 15 misclassified as Real)
+
+The model shows excellent performance, with a particularly high recall for spoofing attacks (99.8%), which is critical for security applications.
+
 
 
