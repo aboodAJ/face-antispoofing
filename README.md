@@ -2,10 +2,10 @@
 
 This project implements a data loading and training pipeline for Face Anti-Spoofing (classifying images as "Real" or "Spoof") using a MobileNetV3 architecture. It leverages a merged dataset strategy to achieve better class balance and diversity.
 
-## 🎯 Project Goal
+##  Project Goal
 Train a robust MobileNet model to detect spoofing attacks (e.g., printed photos, screen replays) by combining multiple datasets and applying advanced data augmentation.
 
-## 📊 Dataset Strategy: Merging LCC_FASD & SiW
+##  Dataset Strategy: Merging LCC_FASD & SiW
 We analyzed two datasets and found them individually imbalanced:
 *   **LCC_FASD**: Heavily skewed towards **Spoof** (~1:7 Real:Spoof).
 *   **SiW**: Heavily skewed towards **Real** (~4:1 Real:Spoof).
@@ -20,7 +20,7 @@ We analyzed two datasets and found them individually imbalanced:
 | **Val** | 1,005 | 2,693 | 2.68 : 1 |
 | **Test** | 914 | 7,416 | 8.11 : 1 |
 
-## 🛠️ Code Structure
+##  Code Structure
 
 ### 1. `dataset.py`
 Contains the custom `AntiSpoofDataset` class.
@@ -49,7 +49,7 @@ The main training notebook implementing the logic to fine-tune MobileNetV3.
     *   **Checkpointing**: Saves the model with the best validation accuracy.
 *   **Evaluation**: Reports Test Set accuracy and metrics after training.
 
-## 📈 Results
+##  Results
 
 After training the MobileNetV3 model, we evaluated it on the **Test Set** (8,330 samples).
 
@@ -70,5 +70,6 @@ Based on the confusion matrix above:
 
 The model shows excellent performance, with a particularly high recall for spoofing attacks (99.8%), which is critical for security applications.
 
+###  Authors : 
 
 
